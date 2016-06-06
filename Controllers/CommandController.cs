@@ -12,7 +12,7 @@ namespace Controllers
     /// <summary>
     /// Controller for the CommandViewModel to interface with the service layer.
     /// </summary>
-    public class CommandController : ICommandController
+    public partial class CommandController : ICommandController
     {
         #region Private Properties
         private ICommandService CommandService;
@@ -22,6 +22,7 @@ namespace Controllers
         public CommandController(ICommandService service)
         {
             CommandService = service;
+            InitializeService();
         }
         #endregion
 
