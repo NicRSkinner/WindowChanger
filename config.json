@@ -1,0 +1,28 @@
+{
+	"PhoneCallSet":[
+		{"CommandType":"CTYPE_WND","Command":"0x31","Presses":"1"}
+		{"CommandType":"CTYPE_WND","Command":"0x32","Presses":"1"}
+		{"CommandType":"CTYPE_WND","Command":"0x34","Presses":"2"}
+		{"CommandType":"CTYPE_WND","Command":"0x37","Presses":"1"}
+	],
+	"WebchatSet":[
+		{"CommandType":"CTYPE_WND","Command":"0x31","Presses":"1"}
+		{"CommandType":"CTYPE_WND","Command":"0x32","Presses":"1"}
+		{"CommandType":"CTYPE_WND","Command":"0x34","Presses":"2"}
+		{"CommandType":"CTYPE_WND","Command":"0x35","Presses":"1"}
+		{"CommandType":"CTYPE_WND","Command":"0x37","Presses":"1"}
+	],
+	"EmailSet":[
+		{"CommandType":"CTYPE_WND","Command":"0x31","Presses":"1"}
+		{"CommandType":"CTYPE_WND","Command":"0x32","Presses":"1"}
+		{"CommandType":"CTYPE_WND","Command":"0x33","Presses":"1"}
+		{"CommandType":"CTYPE_WND","Command":"0x34","Presses":"1"}
+		{"CommandType":"CTYPE_WND","Command":"0x37","Presses":"1"}
+	],
+	"PersonalCallSet":[
+		{"CommandType":"CTYPE_WND","Command":"0x31","Presses":"1"}
+		{"CommandType":"CTYPE_WND","Command":"0x31","Presses":"2"}
+		{"CommandType":"CTYPE_WND","Command":"0x32","Presses":"1"}
+		{"CommandType":"CTYPE_WND","Command":"0x37","Presses":"1"}
+	]
+}

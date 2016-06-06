@@ -1,0 +1,19 @@
+﻿<Window x:Class="WindowChanging.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Window Changer" Height="70" Width="432">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="425"/>
+            <ColumnDefinition Width="279*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="231*"/>
+        </Grid.RowDefinitions>
+        <Button Width="100" Height="30" Click="BtnCall_Click" Margin="0,2,325,3">Phonecall</Button>
+        <Button Width="100" Height="30" Click="BtnChats_Click" Margin="105,2,220,3">Webchats</Button>
+        <Button Width="100" Height="30" Click="BtnEmail_Click" Margin="210,2,115,3">E-Mail</Button>
+        <Button Width="100" Height="30" Click="BtnPersonal_Click" Margin="315,2,10,3">Down-Time</Button>
+    </Grid>
+</Window>
