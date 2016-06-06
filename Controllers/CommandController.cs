@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Controllers
@@ -86,7 +87,43 @@ namespace Controllers
         #endregion
 
         #region Private Properties
+        /// <summary>
+        /// Sends a press event for the special command keys.
+        /// </summary>
+        /// <param name="command">The special command to send.</param>
+        /// <param name="isPressDown">Whether or not the key will be pressed down, or up.</param>
+        private void SpecialKeyCommand(byte command, bool isPressDown = true)
+        {
+            uint dwFlag = 0x00;
 
+            if (isPressDown == true)
+                dwFlag = 0x2;
+
+            keybd_event(command, 0, dwFlag, 0);
+
+            Thread.Sleep(20);
+        }
+
+        /// <summary>
+        /// Sends a regular command to the Windows API.
+        ///     The function sleeps the thread so that the keys are registered correctly
+        ///     by the system.
+        /// </summary>
+        /// <param name="command">They command to send to the API.</param>
+        /// <param name="presses">How many times the command should be pressed.</param>
+        private void KeyCommand(byte command, uint presses)
+        {
+            for (uint i = 0; i < presses; ++i)
+            {
+                keybd_event(command, 0, 0, 0);  //  Press the key down.
+
+                Thread.Sleep(20);
+
+                keybd_event(command, 0, 0x2, 0);  //  Let the key up.
+
+                Thread.Sleep(20);
+            }
+        }
         #endregion
     }
 }
